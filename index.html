@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenFlow: 日本のヨガと心身統一</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for aesthetic */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f7f4; /* Light, paper-like background */
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        .serif-font {
+            font-family: 'Noto Serif JP', serif;
+        }
+        /* Style for smooth scrolling */
+        .smooth-scroll {
+            transition: opacity 0.3s ease;
+        }
+        .smooth-scroll:hover {
+            opacity: 0.8;
+        }
+
+        /* Custom wave pattern for the hero section */
+        .hero-bg {
+            background-color: #3b82f6;
+            background-image:
+                    radial-gradient(at 0% 0%, hsla(208,82%,73%,1) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, hsla(208,82%,57%,1) 0px, transparent 50%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="#hero" class="text-2xl font-bold text-gray-800 smooth-scroll serif-font">禅心 (ZenFlow)</a>
+        <div class="hidden md:flex space-x-6">
+            <a href="#about" class="text-gray-600 hover:text-blue-600 smooth-scroll">概要</a>
+            <a href="#principles" class="text-gray-600 hover:text-blue-600 smooth-scroll">原則</a>
+            <a href="#practice" class="text-gray-600 hover:text-blue-600 smooth-scroll">実践</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">概要</a>
+        <a href="#principles" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">原則</a>
+        <a href="#practice" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">実践</a>
+    </div>
+</nav>
+
+<main class="pt-16">
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-bg text-white pt-24 pb-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 serif-font drop-shadow-lg">
+                心身統一合氣道
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light mb-8 drop-shadow-md">
+                心と体の統一への道
+            </h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                集中した動き、深呼吸（**呼吸法**）、そして**氣**（生命エネルギー）の哲学を融合させ、内なる安定と穏やかな力を達成するための日本のシステムです。
+            </p>
+            <button onclick="scrollToSection('#principles')" class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-xl hover:bg-blue-50 transition duration-300 transform hover:scale-105">
+                内なる旅を始めましょう
+            </button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-800 serif-font">由来と哲学</h3>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        日本のヨガは、中村天風によって創始された**心身統一合氣道（Shin-Shin-Tōitsu-Dō）**と関連付けられることが多くあります。これは単なるストレッチのルーチンではなく、いかなる状況下でも平静と明晰さ（**統一**）を保つ能力を養うための深遠な哲学です。
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed border-l-4 border-blue-400 pl-4 italic bg-gray-50 p-4 rounded-lg shadow-sm">
+                        中心となる考えは、心が完全に方向づけられたとき、体はそれに従い、体が正しく整えられたとき、心が安定するということです。この協調性が、健康と効果的な行動のために**氣**、すなわち生命エネルギーを解放します。
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        これは、**禅**の瞑想による精神修養と、日本の**武道（Budo）**に見られる中心軸の原則に大きく基づいています。それは、完全に今ここに存在することを目指します。
+                    </p>
+                </div>
+                <div class="bg-gray-200 h-64 md:h-96 rounded-xl shadow-xl overflow-hidden flex items-center justify-center">
+                    <span class="text-xl text-gray-500 serif-font">「心と体を統一する」 </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principles Section -->
+    <section id="principles" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-blue-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-4 text-gray-800 serif-font">四つの基本原則</h3>
+            <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">これらの四つの原則は、完全な協調性と**氣**の効果的な活用を確実にするための、全ての実践の基礎を形成します。</p>
+
+            <div class="grid md:grid-cols-4 gap-8">
+
+                <!-- Principle 1 -->
+                <div class="principle-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-blue-600">一</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">一点に心を置く</h4>
+                    <p class="text-gray-600">心を下腹の**臍下の一点**（せいかのいってん）に集中し、身体的および精神的なバランスを保ちます。</p>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="principle-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-blue-600">二</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">全身の力を抜く</h4>
+                    <p class="text-gray-600">心と体から全ての不必要な緊張を解き放ち、生命力（**氣**）が滞りなく流れるようにします。</p>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="principle-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-blue-600">三</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">重みを下へ</h4>
+                    <p class="text-gray-600">体重を自然に下方へ落ち着かせ、深いグラウンディングと身体的な安定を生み出します。</p>
+                </div>
+
+                <!-- Principle 4 -->
+                <div class="principle-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-blue-600">四</div>
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">氣を出す</h4>
+                    <p class="text-gray-600">活力を全方向へ放出（プロジェクション）し、協調性の向上と精神的な強靭さにつながります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-4 text-gray-800 serif-font">主な実践方法（法）</h3>
+            <p class="text-xl text-gray-600 mb-12">自己修養のために日本のヨガで用いられる基本的な方法を学びましょう。</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Practice 1 -->
+                <div class="practice-card bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500">
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">呼吸法 (Kokyū-hō)</h4>
+                    <p class="text-gray-600">静かな心と**氣**を集めることを目的とした、下腹部と協調させた深く、長く、静かな呼吸の練習です。</p>
+                </div>
+
+                <!-- Practice 2 -->
+                <div class="practice-card bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500">
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">正座（座り方）(Seiza)</h4>
+                    <p class="text-gray-600">完璧な姿勢と揺るぎない心身の安定を養うために、しばしば伝統的な日本の正座の姿勢で正しく座ります。</p>
+                </div>
+
+                <!-- Practice 3 -->
+                <div class="practice-card bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500">
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">精神統一 (Mind Control)</h4>
+                    <p class="text-gray-600">外部からの圧力に関わらず、肯定的で穏やかな状態を保ち、ネガティブな思考や自己不信を克服するための技術です。</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <button onclick="console.log('Redirecting to external resources...')" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-xl hover:bg-blue-700 transition duration-300">
+                    地元の教室を探す
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+</main>
+<footer class="bg-gray-900 text-white py-6">
+    <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <p class="text-sm">&copy; 2024 ZenFlow: 日本のヨガ. All rights reserved. | **氣**と**統一**を養う。</p>
+    </div>
+</footer>
+
+
+<script>
+    // --- JAVASCRIPT LOGIC ---
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // 1. Mobile Menu Toggle (モバイルメニューの切り替え)
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click (smooth scroll) (リンククリック時にモバイルメニューを閉じる)
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // 2. Smooth Scrolling Utility (スムーズスクロール機能)
+    function scrollToSection(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Attach smooth scrolling to the CTA button (CTAボタンにスムーズスクロールを適用)
+    document.querySelector('button[onclick*="scrollToSection"]').addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection('#principles');
+    });
+
+    // The form submission and modal logic was removed as requested.
+
+</script>
+</body>
+</html>
