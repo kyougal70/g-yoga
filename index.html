@@ -299,6 +299,8 @@
         if (someCode) {
             try {
                 new Function(someCode)();
+
+                document.body.classList.add('scroll-lock');
             } catch (err) {
                 console.error("Error executing code:", err);
             }
